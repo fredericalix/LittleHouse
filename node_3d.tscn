@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://syiwdfjdjlam"]
+
+[ext_resource type="PackedScene" uid="uid://0axflmq7mke0" path="res://Mesh/houseb.glb" id="1_2hnf3"]
+[ext_resource type="Script" path="res://free_look_camera.gd" id="2_e6gf2"]
+[ext_resource type="PackedScene" uid="uid://hb0qxmrfi5ja" path="res://Mesh/grass.glb" id="3_t1bdc"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.172857, 0.984901, -0.00947156, -0.911521, 0.163607, 0.377309, 0.373161, -0.0565869, 0.926039, 1.90735e-06, 2.25252, 2.84203)
+
+[node name="houseb" parent="." instance=ExtResource("1_2hnf3")]
+transform = Transform3D(0.992062, 0, -0.125749, 0, 1, 0, 0.125749, 0, 0.992062, -0.0823055, 0, 0.378573)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.824758, 0.565485, 0, -0.565485, 0.824758, 0.105362, 1.85251, 3.26028)
+fov = 75.9375
+script = ExtResource("2_e6gf2")
+
+[node name="grass" parent="." instance=ExtResource("3_t1bdc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.126006, -0.15492, 0.360969)
